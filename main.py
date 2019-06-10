@@ -1,4 +1,5 @@
 
+
 def create_files(fileIn, fileOut, csvFileOut):
     with open(fileOut, 'w') as parsedFile:
         with open(fileIn) as file1:
@@ -43,9 +44,6 @@ def create_files(fileIn, fileOut, csvFileOut):
 
             csv.write(stringToWrite)
 
-
-create_files("fcfs.txt", "fcfsParsed.txt", "fcfsCsv.txt")
-create_files("sjf.txt", "sjfParsed.txt", "sjfCsv.txt")
 
 create_files("rr1.txt", "rr1Parsed.txt", "rr1Csv.txt")
 create_files("rr5.txt", "rr5Parsed.txt", "rr5Csv.txt")

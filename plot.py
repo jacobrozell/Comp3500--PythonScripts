@@ -1,21 +1,29 @@
 import matplotlib.pyplot as plt
 import csv
 
-x=[]
-y=[]
 
-with open('csvfile1.txt', 'r') as csvfile:
-    plots= csv.reader(csvfile, delimiter=',')
+pids = []
+jats = []
+turnAround = []
+tjds = []
+mems = []
+
+
+with open('fcfsCsv.txt', 'r') as csvfile:
+    plots = csv.reader(csvfile, delimiter=',')
     for row in plots:
-        x.append(int(row[0]))
-        y.append(int(row[1]))
+        pids.append(float(row[0]))
+        jats.append(float(row[1]))
+        turnAround.append(float(row[2]))
+        tjds.append(float(row[3]))
+        mems.append(float(row[4]))
 
 
-plt.plot(x,y, marker='o')
+plt.plot(pids, jats, turnAround, tjds, mems, marker='o')
 
 plt.title('Data from the CSV File: People and Expenses')
 
-plt.xlabel('Number of People')
+plt.xlabel('N')
 plt.ylabel('Expenses')
 
 plt.show()
